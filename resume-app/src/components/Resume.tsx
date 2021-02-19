@@ -1,11 +1,7 @@
 import { Row, Col } from "react-bootstrap";
 import RellaxWrapper from "react-rellax-wrapper";
-import { Document, Page } from "react-pdf";
-import { useState } from "react";
 
 const Resume = () => {
-  const [numPages, setNumPages] = useState<number>();
-  const [pageNumber, setPageNumber] = useState<number>(1);
 
   return (
     <>
@@ -15,11 +11,9 @@ const Resume = () => {
             <Col>
               <RellaxWrapper percentage={0.5} speed={-8}>
                 <div>
-                  <Document file="resume.pdf">
-                    <Page pageNumber={pageNumber} />
-                  </Document>
+             
                   <p>
-                    Page {pageNumber} of {numPages}
+                   p
                   </p>
                 </div>
               </RellaxWrapper>

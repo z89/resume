@@ -1,10 +1,5 @@
 import { ReactComponent as Droplet } from "../assests/svgs/header/droplet.svg";
 import { ReactComponent as Brand } from "../assests/svgs/header/brand.svg";
-// import { ReactComponent as Line } from "../svgs/header/line.svg";
-
-import { Nav } from "react-bootstrap";
-// import { ReactComponent as Droplet } from "../svgs/sidebars/droplet.svg";
-// import { ReactComponent as Info } from "../svgs/sidebars/info.svg";
 
 const Navbar = () => {
   return (
