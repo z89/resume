@@ -2,7 +2,7 @@
   "name": "resume-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://z89.github.io/resume",
+  "homepage": "http://z89.github.io/",
   "dependencies": {
     "@svgr/webpack": "^5.5.0",
     "@testing-library/jest-dom": "^5.11.4",
@@ -16,6 +16,7 @@
     "react": "^17.0.1",
     "react-bootstrap": "^1.5.0",
     "react-dom": "^17.0.1",
+    "react-pdf": "^5.2.0",
     "react-rellax-wrapper": "^1.0.6",
     "react-scripts": "4.0.2",
     "typescript": "^4.1.2",
@@ -46,5 +47,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/react-pdf": "^5.0.1"
   }
 }
