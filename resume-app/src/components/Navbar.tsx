@@ -1,5 +1,5 @@
 import { ReactComponent as Brand } from "../assests/svgs/header/brand.svg";
-import { GitHub, AtSign, Droplet } from "react-feather";
+import { GitHub, Activity, Droplet, Send, Book } from "react-feather";
 
 const iconWidth = 1.5;
 
@@ -18,19 +18,33 @@ const Navbar = () => {
               <ul className="social-group">
                 <li>
                   <a href="https://github.com/z89">
-                    <GitHub
+                    <Droplet
                       strokeWidth={iconWidth}
-                      style={{ top: "39%" }}
-                      className="social-icon"
+                      className="github social-icon"
                     />
                   </a>
                 </li>
                 <li>
                   <a href="https://github.com/z89">
-                    <AtSign
+                    <Activity
                       strokeWidth={iconWidth}
-                      style={{ top: "61%" }}
-                      className="social-icon"
+                      className="activity social-icon"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/z89">
+                    <Send
+                      strokeWidth={iconWidth}
+                      className="mail social-icon"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/z89">
+                    <Book
+                      strokeWidth={iconWidth}
+                      className="book social-icon"
                     />
                   </a>
                 </li>
@@ -40,7 +54,7 @@ const Navbar = () => {
               <ul className="options-group">
                 <li>
                   <a href="#first">
-                    <Droplet
+                    <GitHub
                       strokeWidth={iconWidth}
                       style={{ height: "60%" }}
                       className="option-icon"
