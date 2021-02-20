@@ -1,6 +1,5 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-
 import Navbar from "./components/Navbar";
 import Resume from "./components/Resume";
 
@@ -12,7 +11,17 @@ function App() {
       <Container fluid>
         <div className="App">
           <Navbar />
-          <Resume />
+          <div
+            style={{
+              display: "flex",
+              transform: "translate(0%, 10%)",
+              margin: "0 auto",
+              width: "80%",
+            }}
+            className="resume"
+          >
+            <Resume />
+          </div>
         </div>
       </Container>
     </>

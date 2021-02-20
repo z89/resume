@@ -53,7 +53,7 @@ const Navbar = () => {
             <li className="nav-bottom">
               <ul className="options-group">
                 <li>
-                  <a href="#first">
+                  <a href="https://github.com/z89">
                     <GitHub
                       strokeWidth={iconWidth}
                       style={{ height: "60%" }}

@@ -1,22 +1,18 @@
 import { Row, Col } from "react-bootstrap";
-import RellaxWrapper from "react-rellax-wrapper";
+// import RellaxWrapper from "react-rellax-wrapper";
+import { ReactComponent as ResumeSVG } from "../assests/svgs/resume.svg";
 
 const Resume = () => {
   return (
     <>
-      <div className="home">
-        <section id="first">
-          <Row className="align-items-center">
-            <Col>
-              <RellaxWrapper percentage={0.5} speed={-8}>
-                <p>p</p>
-              </RellaxWrapper>
-              <RellaxWrapper percentage={0.5} speed={1}>
-                <p>p</p>
-              </RellaxWrapper>
-            </Col>
-          </Row>
-        </section>
+      <div className="resume">
+        <Row className="align-items-center">
+          <Col>
+            <div>
+              <ResumeSVG />
+            </div>
+          </Col>
+        </Row>
       </div>
     </>
   );

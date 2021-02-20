@@ -10,10 +10,10 @@ body {
 }
 
 :root {
-  /* --main-bg-color: #ebebeb;
-  --main-fg-color: #0a192f; */
-  --main-bg-color: #0a192f;
-  --main-fg-color: #64faff;
+  --main-bg-color: #ebebeb;
+  --main-fg-color: #0a192f;
+  /* --main-bg-color: #0a192f;
+  --main-fg-color: #64faff; */
   --navbar-width: 3%;
 }
 html {
@@ -59,6 +59,7 @@ html {
   top: 10%;
   height: 80vh;
   min-width: 20px !important;
+  /* max-width: var(--navbar-width) !important; */
 }
 
 #navbar ul {
@@ -202,9 +203,9 @@ html {
 
 /* END OF HEADER --------------------------- */
 
-/* HOMEPAGE --------------------------- */
+/* RESUME --------------------------- */
 
-.home {
+.resume {
   height: 100vh;
   background-color: var(--main-bg-color);
   color: var(--main-fg-color);
