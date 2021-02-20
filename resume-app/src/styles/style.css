@@ -31,130 +31,111 @@ html {
   text-align: center;
 }
 
-/* HEADER --------------------------- */
-/* brand */
-.brand > g > text {
-  fill: var(--main-fg-color);
-}
-
-/* social icons */
-.social-group {
-  display: flex;
-  flex-direction: column;
-  text-align: right;
-  justify-content: center;
-}
-
-#header {
-  z-index: 1;
-}
-
-/* navbar */
-#navbar {
-  position: fixed;
-  width: var(--navbar-width);
-  display: flex;
-  color: var(--main-fg-color);
-  border-right: 0.5px solid var(--main-fg-color);
-  top: 10%;
-  height: 80vh;
-  min-width: 20px !important;
-  /* max-width: var(--navbar-width) !important; */
-}
-
-#navbar ul {
-  list-style: none;
-  overflow: hidden;
-  margin: 50%;
-  padding: 0;
-}
-
-/* navbar section */
-.nav-top {
-  top: 0%;
-  height: 20%;
-  width: 100%;
-  position: absolute;
-  min-width: 4% !important;
-  /* background-color: red; */
-}
-
-.nav-middle {
-  top: 32%;
-  height: 35%;
-  width: 100%;
-  position: absolute;
-  margin: 0 auto;
-  margin-top: 0px;
-  min-width: 4% !important;
-  /* background-color: blue; */
-}
-
-.nav-bottom {
-  top: 80%;
-  height: 20%;
-  width: 100%;
-  position: absolute;
-  min-width: 4% !important;
-  /* background-color: green; */
-}
-
-/* options icons */
-.options-group {
-  display: flex;
-  flex-direction: column;
-  text-align: right;
-  justify-content: center;
-}
-
 @media only screen and (min-width: 0px) {
-  .brand {
-    padding-bottom: 10%;
-    width: 100%;
-    transform: translate(3%, 0%);
-    height: 60%;
-    background-color: var(--main-bg-color);
+  #navbar {
+    display: none;
+    /* max-width: var(--navbar-width) !important; */
   }
-
-  .github {
-    top: 25%;
+  .brand > g > text {
+    fill: var(--main-fg-color);
   }
-
-  .activity {
-    top: 50%;
-  }
-
-  .mail {
-    top: 75%;
-  }
-
-  .book {
-    top: 100%;
-  }
-
-  .social-icon {
+  .navbar-toggler {
     position: absolute;
-    left: 50%;
-    width: 80%;
-    transform: translate(-50%, -80%);
-    height: 25%;
-    stroke: var(--main-fg-color);
-    background-color: var(--main-bg-color);
+    left: 90%;
+    top: 40%;
+    background-color: red;
+    margin: 0 auto;
   }
-
-  .option-icon {
-    position: absolute;
-    width: 80%;
-    left: 53%;
-    transform: translate(-53%, -100%);
-    top: 100%;
-    height: 25%;
-    stroke: var(--main-fg-color);
-    background-color: var(--main-bg-color);
+  .menu-half {
+    display: inline-block !important;
+    width: 20%;
+    height: 20px;
   }
 }
 
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 992px) {
+  #small-navbar {
+    display: none;
+    /* max-width: var(--navbar-width) !important; */
+  }
+  /* HEADER --------------------------- */
+  /* brand */
+  .brand > g > text {
+    fill: var(--main-fg-color);
+  }
+
+  /* social icons */
+  .social-group {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    justify-content: center;
+  }
+
+  #header {
+    z-index: 1;
+  }
+
+  /* navbar */
+  #navbar {
+    display: none;
+    position: fixed;
+    width: var(--navbar-width);
+    display: flex;
+    color: var(--main-fg-color);
+    border-right: 0.5px solid var(--main-fg-color);
+    top: 5%;
+    height: 90vh;
+    min-width: 20px !important;
+
+    /* max-width: var(--navbar-width) !important; */
+  }
+
+  #navbar ul {
+    list-style: none;
+    overflow: hidden;
+    margin: 50%;
+    padding: 0;
+  }
+
+  /* navbar section */
+  .nav-top {
+    top: 0%;
+    height: 20%;
+    width: 100%;
+    position: absolute;
+    min-width: 4% !important;
+    /* background-color: red; */
+  }
+
+  .nav-middle {
+    top: 32%;
+    height: 35%;
+    width: 100%;
+    position: absolute;
+    margin: 0 auto;
+    margin-top: 0px;
+    min-width: 4% !important;
+    /* background-color: blue; */
+  }
+
+  .nav-bottom {
+    top: 80%;
+    height: 20%;
+    width: 100%;
+    position: absolute;
+    min-width: 4% !important;
+    /* background-color: green; */
+  }
+
+  /* options icons */
+  .options-group {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    justify-content: center;
+  }
+
   .brand {
     padding-bottom: 10%;
     width: 60%;
@@ -199,9 +180,8 @@ html {
     stroke: var(--main-fg-color);
     background-color: var(--main-bg-color);
   }
+  /* END OF HEADER --------------------------- */
 }
-
-/* END OF HEADER --------------------------- */
 
 /* RESUME --------------------------- */
 
