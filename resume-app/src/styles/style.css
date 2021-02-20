@@ -4,11 +4,12 @@
   --main-bg-color: #0a192f;
   --main-fg-color: #64faff;
   /* --navbar-width: 4%; */
-  --navbar-width: 10%;
+  --navbar-width: 3%;
 }
 html {
   background-color: var(--main-bg-color);
   /* background-color: #64faff !important; */
+   /* min-width: 1000px; */
 }
 
 .App {
@@ -16,10 +17,13 @@ html {
   top: 0;
   left: 0;
   width: 100%;
+  /* min-width: 1000px; */
   height: 100vh;
   padding: 0;
   font-family: sans-serif;
   text-align: center;
+  
+  /* background-color: red; */
 }
 
 /* HEADER --------------------------- */
@@ -30,85 +34,64 @@ html {
 
 #navbar {
   position: fixed;
-  width: var(--navbar-width);
+  width: var(--navbar-width );
   display: flex;
-  clear: right;
-  float: left;
   color: var(--main-fg-color);
-  border-right: 0.01em solid var(--main-fg-color);
-  /* background-color: red; */
+  border-right: 1px solid var(--main-fg-color);
   top: 10%;
   height: 80vh;
+  min-width: 50px !important;
+  background-color: red;
 }
 
 #navbar ul {
   list-style: none;
   overflow: hidden;
-  clear: right;
-  float: right;
-  margin: 0;
+  margin: 50%;
   padding: 0;
-  width: 60%;
+  
 }
 
 .nav-top {
-  /* background-color: var(--main-bg-color); */
-  /* background-color: greenyellow; */
-  top: 0%;
+  top: 6%;
   height: 25%;
   width: 100%;
   position: absolute;
+  min-width: 4% !important;
+  
+  /* background-color: red; */
 }
 
 .nav-middle {
-  /* background-color: var(--main-bg-color); */
-  /* background-color: blue; */
-  top: 28%;
+  top: 25%;
   height: 50%;
   width: 100%;
   position: absolute;
   margin: 0 auto;
   margin-top: 0px;
+  /* background-color: blue; */
 }
 
 .nav-bottom {
-  /* background-color: var(--main-bg-color); */
-  /* background-color: palevioletred; */
-  top: 80%;
-  height: 20%;
+  top: 75%;
+  height: 25%;
   width: 100%;
   position: absolute;
+  /* background-color: green; */
 }
 
 /* brand */
-.brand {
-  width: 25%;
-  height: 100%;
-  transform: translate(-100%, -15%);
-  float: right;
+.brand {  
+  padding-bottom: 10%;
+  width: 50%;
+  transform: translate(3%, 0%);
+  height: 60%;
+  background-color: var(--main-bg-color);
+  
 }
 
 .brand > g > text {
   fill: var(--main-fg-color);
-}
-
-/* menu lines */
-
-.line-group {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-}
-.line {
-  margin: 0% 0 30% 30%;
-  background-color: var(--main-fg-color);
-  display: block;
-  flex: 0 1 auto;
-  width: 10%;
-  height: 1.5%;
 }
 
 /* social icons */
@@ -117,25 +100,18 @@ html {
   flex-direction: column;
   text-align: right;
   justify-content: center;
+ 
 }
 
 .social-icon {
   position: absolute;
-  height: auto;
-  width: 10%;
-  right: 34%;
-  top: 40%;
+  width: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
   stroke: var(--main-fg-color);
-  /* background-color: red; */
-}
-
-.social {
-  margin: 25% 0 25% 0;
-}
-
-path[data-name="droplet"] {
-  stroke: var(--main-fg-color) !important;
-  /* fill: var(--main-fg-color) !important; */
+  background-color: var(--main-bg-color);
+ 
 }
 
 /* END OF HEADER --------------------------- */

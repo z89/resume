@@ -1,4 +1,5 @@
 import { ReactComponent as Droplet } from "../assests/svgs/header/droplet.svg";
+import { ReactComponent as GitHub } from "../assests/svgs/header/github.svg";
 import { ReactComponent as Brand } from "../assests/svgs/header/brand.svg";
 
 const Navbar = () => {
@@ -13,25 +14,10 @@ const Navbar = () => {
               </a>
             </li>
             <li className="nav-middle">
-              <ul className="line-group">
-                <li className="line">
-                  <a href="/s">
-                    <div style={{ width: "100%", height: "100%" }} />
-                  </a>
-                </li>
-                <li className="line">
-                  <a href="/s">
-                    <div style={{ width: "100%", height: "100%" }} />
-                  </a>
-                </li>
-                <li className="line">
-                  <a href="#first">
-                    <div style={{ width: "100%", height: "100%" }} />
-                  </a>
-                </li>
-                <li className="line">
-                  <a href="#second">
-                    <div style={{ width: "100%", height: "100%" }} />
+             <ul className="social-group">
+                <li className="social">
+                  <a href="https://github.com/z89">
+                    <GitHub style={{height: "25%"}} className="social-icon" />
                   </a>
                 </li>
               </ul>
@@ -40,7 +26,7 @@ const Navbar = () => {
               <ul className="social-group">
                 <li className="social">
                   <a href="#first">
-                    <Droplet className="social-icon" />
+                    <Droplet style={{height: "50%"}}className="social-icon" />
                   </a>
                 </li>
               </ul>
