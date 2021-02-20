@@ -1,6 +1,7 @@
-import { ReactComponent as Droplet } from "../assests/svgs/header/droplet.svg";
-import { ReactComponent as GitHub } from "../assests/svgs/header/github.svg";
 import { ReactComponent as Brand } from "../assests/svgs/header/brand.svg";
+import { GitHub, AtSign, Droplet } from "react-feather";
+
+const iconWidth = 1.5;
 
 const Navbar = () => {
   return (
@@ -14,19 +15,36 @@ const Navbar = () => {
               </a>
             </li>
             <li className="nav-middle">
-             <ul className="social-group">
-                <li className="social">
+              <ul className="social-group">
+                <li>
                   <a href="https://github.com/z89">
-                    <GitHub style={{height: "25%"}} className="social-icon" />
+                    <GitHub
+                      strokeWidth={iconWidth}
+                      style={{ top: "39%" }}
+                      className="social-icon"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/z89">
+                    <AtSign
+                      strokeWidth={iconWidth}
+                      style={{ top: "61%" }}
+                      className="social-icon"
+                    />
                   </a>
                 </li>
               </ul>
             </li>
             <li className="nav-bottom">
-              <ul className="social-group">
-                <li className="social">
+              <ul className="options-group">
+                <li>
                   <a href="#first">
-                    <Droplet style={{height: "50%"}}className="social-icon" />
+                    <Droplet
+                      strokeWidth={iconWidth}
+                      style={{ height: "60%" }}
+                      className="option-icon"
+                    />
                   </a>
                 </li>
               </ul>
