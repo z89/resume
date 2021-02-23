@@ -1,0 +1,7 @@
+{
+  "short_name": "Resume App",
+  "name": "z89 - Resume",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone"
+}

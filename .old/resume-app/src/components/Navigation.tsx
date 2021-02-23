@@ -1,5 +1,5 @@
 import { ReactComponent as Brand } from "../assests/svgs/header/brand.svg";
-import { GitHub, Activity, Droplet, Send, Book } from "react-feather";
+import { GitHub, Activity, Droplet, Send, Book, Mail } from "react-feather";
 import { Nav, Navbar } from "react-bootstrap";
 
 const iconWidth = 1.5;
@@ -20,7 +20,7 @@ const Navigation = () => {
                 <a href="https://github.com/z89">
                   <Droplet
                     strokeWidth={iconWidth}
-                    className="github social-icon"
+                    className="droplet social-icon"
                   />
                 </a>
               </li>
@@ -34,7 +34,7 @@ const Navigation = () => {
               </li>
               <li>
                 <a href="https://github.com/z89">
-                  <Send strokeWidth={iconWidth} className="mail social-icon" />
+                  <Send strokeWidth={iconWidth} className="send social-icon" />
                 </a>
               </li>
               <li>
@@ -50,9 +50,13 @@ const Navigation = () => {
                 <a href="https://github.com/z89">
                   <GitHub
                     strokeWidth={iconWidth}
-                    style={{ height: "60%" }}
-                    className="option-icon"
+                    className="github option-icon"
                   />
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/z89">
+                  <Mail strokeWidth={iconWidth} className="mail option-icon" />
                 </a>
               </li>
             </ul>
@@ -60,26 +64,19 @@ const Navigation = () => {
         </ul>
       </div>
 
-      <Navbar style={{ height: "40px" }} id="small-navbar" expand="lg">
+      <Navbar id="small-navbar" expand="lg" className="nav">
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <ul>
               <li className="menu-half">
-                <Navbar.Brand
-                  style={{
-                    display: "inline-block",
-                    left: "5%",
-                    width: "30%",
-                  }}
-                  href="#home"
-                >
+                <Navbar.Brand href="#home">
                   <Brand className="brand" />
                 </Navbar.Brand>
               </li>
 
               <li className="menu-half">
-                <Nav.Link style={{ display: "inline-block" }} href="#home">
+                <Nav.Link href="#home">
                   <Droplet
                     strokeWidth={iconWidth}
                     className="github social-icon"
