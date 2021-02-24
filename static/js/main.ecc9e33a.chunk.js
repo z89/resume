@@ -1,2 +1,2 @@
 (this["webpackJsonpresume-app"]=this["webpackJsonpresume-app"]||[]).push([[0],{10:function(e,n,t){"use strict";t.r(n);var c=t(1),r=t.n(c),s=t(3),i=t.n(s),u=(t(8),t(0));var o=function(){return Object(u.jsx)("div",{className:"App",children:Object(u.jsx)("h1",{children:"resume"})})},a=function(e){e&&e instanceof Function&&t.e(3).then(t.bind(null,11)).then((function(n){var t=n.getCLS,c=n.getFID,r=n.getFCP,s=n.getLCP,i=n.getTTFB;t(e),c(e),r(e),s(e),i(e)}))};i.a.render(Object(u.jsx)(r.a.StrictMode,{children:Object(u.jsx)(o,{})}),document.getElementById("root")),a()},8:function(e,n,t){}},[[10,1,2]]]);
-//# sourceMappingURL=main.d7681095.chunk.js.map
+//# sourceMappingURL=main.ecc9e33a.chunk.js.map
