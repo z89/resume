@@ -8,7 +8,7 @@ const Portfolio = () => {
         <div className="page align-items-center">
           <Row>
             <main>
-              <h1>Lorem Ipsum title</h1>
+              <h1>Lorem Ipsum title test title</h1>
 
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
