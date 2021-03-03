@@ -6,12 +6,12 @@
   /* --background-color: #0a192f;
   --foreground-color: #64faff; */
   --transition-speed: 600ms;
-  --navbar-width: 7rem;
-  --navbar-height: 90vh;
+  --navbar-width: 5rem;
+  --navbar-height: 100vh;
   --content-padding: 4rem;
   --brand-size: 2rem;
   --icon-size: 1.4rem;
-  --icon-stroke: 1.4px;
+  --icon-stroke: 1.5px;
   --navbar-padding: 1rem;
   --item-height: 4rem;
 }
@@ -128,8 +128,12 @@ body::-webkit-scrollbar-thumb {
 
 @media only screen and (min-width: 1000px) {
   .content {
+    position: absolute;
     margin-left: var(--navbar-width);
-    padding: var(--content-padding);
+    top: 50%;
+    transform: translate(0%, -50%);
+    padding-left: var(--content-padding);
+    padding-right: var(--content-padding);
     color: var(--foreground-color);
   }
 
