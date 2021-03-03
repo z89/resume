@@ -6,9 +6,9 @@ const Navigation = () => {
     <>
       <nav className="navbar">
         <ul className="navbar-nav">
-          <li className="nav-item brand">
-            <a href="/#" className="nav-link">
-              <Brand />
+          <li className="nav-item">
+            <a href="/#" className="brand-link">
+              <Brand className="brand" />
             </a>
           </li>
 
