@@ -181,12 +181,19 @@ body::-webkit-scrollbar-thumb {
     margin-top: auto;
   }
 
-  .nav-item > .nav-link:hover > svg {
-    stroke: var(--foreground-color);
+  .nav-item:nth-child(5) > .active > svg {
+    stroke: #64faff;
+  }
+
+  .dragging {
+    opacity: 60%;
+  }
+
+  .nav-item:nth-last-child(3) {
+    margin-top: auto;
   }
 
   .nav-item:last-child {
-    margin-top: auto;
     padding-bottom: var(--navbar-padding);
   }
 

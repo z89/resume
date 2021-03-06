@@ -1,50 +1,95 @@
 import { ReactComponent as Brand } from "../svgs/header/brand.svg";
-import { GitHub, Activity, Droplet, Send, Mail } from "react-feather";
+import {
+  GitHub,
+  Activity,
+  Droplet,
+  Book,
+  Mail,
+  Key,
+  Move,
+  RefreshCw,
+} from "react-feather";
+import { useState } from "react";
+import Draggable from "react-draggable";
 
 const Navigation = () => {
-  return (
-    <>
-      <nav className="navbar">
-        <ul className="navbar-nav">
-          <li className="nav-item">
-            <a href="/#" className="brand-link">
-              <Brand className="brand" />
-            </a>
-          </li>
+  const [move, setMove] = useState(false);
 
-          <li className="nav-item">
-            <a href="/#" className="nav-link">
-              <Droplet />
-            </a>
-          </li>
+  const handleOnClick = (icon: string) => {
+    switch (icon) {
+      case "Move":
+        setMove(!move);
+        break;
+      case "Droplet":
+        console.log("drop!");
+        break;
+      default:
+        console.log("switchin!");
+    }
+  };
 
-          <li className="nav-item">
-            <a href="/#" className="nav-link">
-              <Activity />
-            </a>
-          </li>
+  const navItemsArr = [
+    { iconName: "Book", icon: () => <Book /> },
+    { iconName: "Activity", icon: () => <Activity /> },
+    { iconName: "Droplet", icon: () => <Droplet /> },
+    { iconName: "Move", icon: () => <Move /> },
+    { iconName: "RefreshCw", icon: () => <RefreshCw /> },
+    { iconName: "GitHub", icon: () => <GitHub /> },
+    { iconName: "Mail", icon: () => <Mail /> },
+    { iconName: "Key", icon: () => <Key /> },
+  ];
 
-          <li className="nav-item">
-            <a href="/#" className="nav-link">
-              <Send />
-            </a>
-          </li>
+  const navItems = Object.values(navItemsArr).map((item, index) => {
+    const Icon = item.icon;
+    const iconName = item.iconName;
 
-          <li className="nav-item">
-            <a href="/#" className="nav-link">
-              <Mail />
-            </a>
-          </li>
+    return (
+      <li className="nav-item">
+        <div
+          onClick={() => {
+            handleOnClick(iconName);
+          }}
+          className={move ? "active nav-link" : "nav-link"}
+        >
+          <Icon key={index} />
+        </div>
+      </li>
+    );
+  });
 
-          <li className="nav-item">
-            <a href="/#" className="nav-link">
-              <GitHub />
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </>
-  );
+  if (move) {
+    return (
+      <>
+        <Draggable defaultClassNameDragging="dragging">
+          <nav className="navbar">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <a href="/#" className="brand-link">
+                  <Brand className="brand" />
+                </a>
+              </li>
+              {navItems}
+            </ul>
+          </nav>
+        </Draggable>
+      </>
+    );
+  } else {
+    return (
+      <>
+        <nav className="navbar">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <a href="/#" className="brand-link">
+                <Brand className="brand" />
+              </a>
+            </li>
+            {navItems}
+          </ul>
+        </nav>
+      </>
+    );
+  }
 };
 
 export default Navigation;
