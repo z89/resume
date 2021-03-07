@@ -5,9 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "export": "next export"
   },
   "dependencies": {
     "@svgr/webpack": "^5.5.0",
