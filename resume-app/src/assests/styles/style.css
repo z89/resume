@@ -113,6 +113,9 @@ body::-webkit-scrollbar-thumb {
   .nav-item:first-child {
     display: none;
   }
+  .nav-item:nth-child(4) {
+    display: none;
+  }
 
   .nav-item {
     background-color: var(--foreground-color);
@@ -123,11 +126,11 @@ body::-webkit-scrollbar-thumb {
   }
 
   .nav-item:hover {
-    background-color: rgba(10, 25, 47, 0.5);
+    padding-bottom: 10px;
+    color: blue;
     justify-content: center;
     align-items: center;
     display: flex;
-    border-radius: 0rem;
   }
   .nav-item:nth-child(2) {
     border-top-left-radius: 3rem;
@@ -181,12 +184,8 @@ body::-webkit-scrollbar-thumb {
     margin-top: auto;
   }
 
-  .nav-item:nth-child(5) > .active > svg {
-    stroke: #64faff;
-  }
-
   .dragging {
-    opacity: 60%;
+    opacity: 90%;
   }
 
   .nav-item:nth-last-child(3) {
@@ -194,14 +193,20 @@ body::-webkit-scrollbar-thumb {
   }
 
   .nav-item:last-child {
-    padding-bottom: var(--navbar-padding);
+    padding-bottom: calc(var(--navbar-padding) * 2);
+  }
+
+  .nav-item:nth-child(5) > .active > svg {
+    stroke: #64faff;
   }
 
   .nav-link {
     display: flex;
-    align-items: center;
+    margin: 0 auto;
+    margin-top: 25%;
+    margin-bottom: 25%;
+    /* background-color: green; */
     justify-content: center;
-    height: var(--item-height);
   }
 
   .nav-link > svg {
