@@ -1,3 +1,5 @@
 # dylanbuckley.net resume [development]
 
-devlopment build of my resume portfolio
+## [~~CI~~/CD pipeline via a github actions workflow :star_struck:]
+
+development build of my resume portfolio
