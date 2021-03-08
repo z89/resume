@@ -42,17 +42,7 @@ body::-webkit-scrollbar-thumb {
   display: grid;
   gap: 2rem;
   justify-content: center;
-  /* 1 too skinny, too much code */
-  /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
-
-  /* 2 cleaner code */
-  /* grid-template-columns: repeat(12, 1fr); */
-
-  /* 3  better sizing, but overflows */
-  /* grid-template-columns: repeat(12, minmax(240px, 1fr)); */
-
-  /* 4 final */
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 
 .card {
@@ -60,15 +50,14 @@ body::-webkit-scrollbar-thumb {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #353535;
-
+  background: var(--foreground-color);
   font-size: 2rem;
   color: #fff;
   box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem,
     rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
   height: 150%;
   width: 100%;
-  transition: all 500ms;
+  transition: all 200ms;
   overflow: hidden;
   background-size: cover;
   background-position: center;
@@ -76,9 +65,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .card:hover {
-  box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em,
-    rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
-  transform: translateY(-3px) scale(1.1);
+  transform: translateY(4px);
 }
 
 .navbar {
