@@ -1,7 +1,17 @@
 import Brand from "../public/svgs/brand.svg";
-import { GitHub, Activity, Droplet, Book, Mail, Key, Move, RefreshCw } from "react-feather";
+import {
+  GitHub,
+  Activity,
+  Droplet,
+  Book,
+  Mail,
+  Key,
+  Move,
+  GitBranch,
+} from "react-feather";
 import { useState } from "react";
 import Draggable from "react-draggable";
+import Link from "next/link";
 
 const Navigation = () => {
   const [move, setMove] = useState(false);
@@ -23,12 +33,14 @@ const Navigation = () => {
   const itemsArr = [
     {
       iconName: "Book",
+      iconLink: "/portfolio",
       icon: () => <Book onMouseDown={() => console.log("I'm a book!")} />,
     },
-    { iconName: "Activity", icon: () => <Activity /> },
-    { iconName: "Droplet", icon: () => <Droplet /> },
+    { iconName: "Activity", iconLink: "/activity", icon: () => <Activity /> },
+    { iconName: "Droplet", iconLink: "/#", icon: () => <Droplet /> },
     {
       iconName: "Move",
+      iconLink: "/#",
       icon: ({
         onMouseDown,
         onMouseUp,
@@ -39,32 +51,55 @@ const Navigation = () => {
         onMouseUp: () => void;
 
         className?: string;
-      }) => <Move onMouseDown={onMouseDown} onMouseUp={onMouseUp} className={className} style={{ width: "auto" }} />,
+      }) => (
+        <Move
+          onMouseDown={onMouseDown}
+          onMouseUp={onMouseUp}
+          className={className}
+          style={{ width: "auto" }}
+        />
+      ),
     },
     {
-      iconName: "RefreshCw",
-      icon: ({ className }: { className?: string }) => <RefreshCw className={className} />,
+      iconName: "GitBranch",
+      iconLink: "https://github.com/z89/resume/tree/gh-pages",
+      icon: () => <GitBranch />,
     },
-    { iconName: "GitHub", icon: () => <GitHub /> },
-    { iconName: "Mail", icon: () => <Mail /> },
-    { iconName: "Key", icon: () => <Key /> },
+    {
+      iconName: "GitHub",
+      iconLink: "https://github.com/z89/",
+      icon: () => <GitHub />,
+    },
+    {
+      iconName: "Mail",
+      iconLink: "/contact",
+      icon: () => <Mail />,
+    },
+    {
+      iconName: "Key",
+      iconLink: "/pgp",
+      icon: () => <Key />,
+    },
   ];
 
   const navItems = Object.values(itemsArr).map((item, index) => {
     const Icon = item.icon;
+    const iconLink = item.iconLink;
     const iconName = item.iconName;
 
     return (
       <li key={index} className="nav-item">
-        <div className={move ? "active nav-link" : "nav-link"}>
-          <Icon
-            onMouseDown={() => {
-              console.log("down");
-              handleOnClick(iconName);
-            }}
-            onMouseUp={() => console.log("up")}
-          />
-        </div>
+        <Link href={iconLink}>
+          <a className={move ? "active nav-link" : "nav-link"}>
+            <Icon
+              onMouseDown={() => {
+                console.log("down");
+                handleOnClick(iconName);
+              }}
+              onMouseUp={() => console.log("up")}
+            />
+          </a>
+        </Link>
       </li>
     );
   });
@@ -72,11 +107,13 @@ const Navigation = () => {
   function jsx() {
     return (
       <nav className="navbar">
-        <ul className="navbar-nav">
+        <ul className={move ? "navbar-nav navbar-hover" : "navbar-nav"}>
           <li className="nav-item">
-            <a href="/#" className="brand-link">
-              <Brand style={{ width: "100%" }} className="brand" />
-            </a>
+            <Link href="/">
+              <a className="brand-link">
+                <Brand style={{ width: "100%" }} className="brand" />
+              </a>
+            </Link>
           </li>
           {navItems}
         </ul>

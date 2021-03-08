@@ -100,7 +100,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .brand-link > svg > text {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 700;
   fill: var(--background-color);
 }
@@ -203,6 +203,10 @@ body::-webkit-scrollbar-thumb {
     margin-left: 1.5rem;
   }
 
+  .navbar-hover:hover {
+    cursor: pointer;
+  }
+
   .navbar-nav {
     flex-direction: column;
   }
@@ -238,6 +242,10 @@ body::-webkit-scrollbar-thumb {
     margin-bottom: 25%;
     /* background-color: green; */
     justify-content: center;
+  }
+
+  .nav-item:nth-child(5) > .nav-link > svg:hover {
+    cursor: pointer;
   }
 
   .nav-link > svg {
