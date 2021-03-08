@@ -202,6 +202,7 @@ body::-webkit-scrollbar-thumb {
     background-color: var(--foreground-color);
     border-radius: 2rem;
     margin-left: 1.5rem;
+    /* border: 1px solid var(--background-color); */
   }
 
   .navbar-hover:hover {
@@ -221,7 +222,7 @@ body::-webkit-scrollbar-thumb {
   }
 
   .dragging {
-    opacity: 90%;
+    border: 1px solid #64faff;
   }
 
   .nav-item:nth-last-child(3) {
