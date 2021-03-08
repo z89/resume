@@ -3,7 +3,7 @@ export default function Portfolio() {
     <>
       <div className="App">
         <div className="portfolio">
-          <h1>Por1221tfolio</h1>
+          <h1>Porfolio</h1>
           <section className="grid">
             <div className="card">1</div>
             <div className="card">another test</div>

@@ -204,7 +204,7 @@ body::-webkit-scrollbar-thumb {
   }
 
   .navbar-hover:hover {
-    cursor: pointer;
+    cursor: move;
   }
 
   .navbar-nav {
