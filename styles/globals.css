@@ -40,8 +40,8 @@ body::-webkit-scrollbar-thumb {
 
 .grid {
   display: grid;
-  gap: 1rem;
-
+  gap: 2rem;
+  justify-content: center;
   /* 1 too skinny, too much code */
   /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
 
@@ -61,12 +61,13 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   align-items: center;
   background: #353535;
-  font-size: 3rem;
+
+  font-size: 2rem;
   color: #fff;
-  box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
-  height: 100%;
+  box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem,
+    rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+  height: 150%;
   width: 100%;
-  border-radius: 4px;
   transition: all 500ms;
   overflow: hidden;
   background-size: cover;
@@ -75,7 +76,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .card:hover {
-  box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+  box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em,
+    rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
   transform: translateY(-3px) scale(1.1);
 }
 
