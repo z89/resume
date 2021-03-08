@@ -5,7 +5,7 @@ export default function Contact() {
         <div className="portfolio">
           <h1>Contact</h1>
           <section className="grid">
-            <div className="card">1</div>
+            <div className="card">yoooyoyo</div>
             <div className="card">another test</div>
             <div className="card">332rd</div>
             <div className="card">4</div>
